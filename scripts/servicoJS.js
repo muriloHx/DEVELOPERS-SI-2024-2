@@ -1,7 +1,7 @@
 //objetos que contem as imagens dos cards
 const casamentoImgs = [
     {
-        imagem: '../imagens/'
+        imagem: '../imagens/bkgnd/bkg2.jpg'
     },
     {
         imagem: '../imagens/'

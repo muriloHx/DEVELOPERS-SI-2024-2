@@ -39,6 +39,7 @@
     background-position: center;
     background-size: cover;
     filter: blur(3px);
+    filter: brightness(70%);
     transform: scale(1.05);
     z-index: -1;
 }
@@ -51,10 +52,11 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 2.5em;
-    color: #2ba3e8;
+    color: #11d750;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.911);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.403);
+    background-color: transparent;
 }
 
 #indexSubtitulo {
