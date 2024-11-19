@@ -28,7 +28,6 @@ casImg.src = casamentoImgs[casCardAtual].imagem;
 casCard.appendChild(casImg);
 
 function alterarCas(x) {
-    console.log(x)
     if (x == 0) {
         if (casCardAtual == 0) return;
         casCardAtual--;
