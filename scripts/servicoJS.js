@@ -1,4 +1,11 @@
-//objetos que contem as imagens dos cards
+document.addEventListener("DOMContentLoaded", () => {
+    const pageId = document.body.id;
+    if (pageId === "servCas") cardCasamento();
+    else if (pageId === "servAni") cardAniversario();
+    else if (pageId === "servCor") cardCorporativo();
+})
+
+//objetos com as imagens do card de cada pagina
 const casamentoImgs = [
     {
         imagem: '../imagens/bkgnd/bkg2.jpg'
@@ -9,38 +16,54 @@ const casamentoImgs = [
 ]
 const aniversarioImgs = [
     {
-        imagem: ''
+        imagem: '../'
+    },
+    {
+        imagem: '../imagens/bkgnd/bkg3.jpg'
     }
 ]
 const corporativoImgs = [
     {
-        imagem: ''
+        imagem: '../imagens/bkgnd/bkg5.jpg'
+    },
+    {
+        imagem: '../imagens/bkgnd/bkg3.jpg'
     }
 ]
+let cardElemento, imagens, cardAtual = 0;
 
-
-let casCardAtual = 0, aniCardAtual = 0, corCardAtual = 0;
-
-//todas as variaveis que iniciam com cas é relacionado ao card de casamento.
-const casCard = document.getElementById('cardCas');
-const casImg = document.createElement('img');
-casImg.src = casamentoImgs[casCardAtual].imagem;
-casCard.appendChild(casImg);
-console.log(casCardAtual);
-function alterarCas(x) {
-    if (x == 0) {
-        if (casCardAtual == 0) return;
-        casCardAtual--;
-        alterarCard(0, casCardAtual);
-    } else {
-        if (casCardAtual < (casamentoImgs.length) - 1) {
-            casCardAtual++;
-            alterarCard(0, casCardAtual);
-        }
-    }
+const imgElemento = document.createElement('img');
+function cardCasamento() {
+    cardElemento = document.getElementById('cardCas');
+    imagens = casamentoImgs;
+    inicio(imagens, cardElemento);
 }
-function alterarCard(x, y) {
+function cardAniversario() {
+    cardElemento = document.getElementById('cardAni');
+    imagens = aniversarioImgs;
+    inicio(imagens, cardElemento);
+}
+function cardCorporativo() {
+    cardElemento = document.getElementById('cardCor');
+    imagens = corporativoImgs;
+    inicio(imagens, cardElemento);
+}
+
+function inicio(imagens, card) {
+    imgElemento.src = imagens[cardAtual].imagem;
+    card.appendChild(imgElemento);
+}
+
+function alterar(x) {
+    console.log(x);
     if (x === 0) {
-        casImg.src = casamentoImgs[casCardAtual].imagem;
+        if (cardAtual === 0) return;
+        cardAtual--;
+    } else {
+        if (cardAtual < (imagens.length) - 1) cardAtual++;
     }
+    alterarCard(cardAtual);
+}
+function alterarCard(x) {
+    imgElemento.src = imagens[cardAtual].imagem;
 }
