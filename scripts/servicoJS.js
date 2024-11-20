@@ -8,31 +8,39 @@ document.addEventListener("DOMContentLoaded", () => {
 //objetos com as imagens do card de cada pagina
 const casamentoImgs = [
     {
-        imagem: '../imagens/bkgnd/bkg2.jpg'
+        imagem: '../imagens/bkgnd/bkg2.jpg',
+        href: '#'
     },
     {
-        imagem: '../imagens/bkgnd/bkg3.jpg'
+        imagem: '../imagens/bkgnd/bkg3.jpg',
+        href: '#'
+
     }
 ]
 const aniversarioImgs = [
     {
-        imagem: '../'
+        imagem: '../imagens/bkgnd/bkg1.jpg',
+        href: '#'
     },
     {
-        imagem: '../imagens/bkgnd/bkg3.jpg'
+        imagem: '../imagens/bkgnd/bkg3.jpg',
+        href: '#'
     }
 ]
 const corporativoImgs = [
     {
-        imagem: '../imagens/bkgnd/bkg5.jpg'
+        imagem: '../imagens/bkgnd/bkg5.jpg',
+        href: '#'
     },
     {
-        imagem: '../imagens/bkgnd/bkg3.jpg'
+        imagem: '../imagens/bkgnd/bkg3.jpg',
+        href: '#'
     }
 ]
 let cardElemento, imagens, cardAtual = 0;
 
 const imgElemento = document.createElement('img');
+const linkImg = document.createElement('a');
 function cardCasamento() {
     cardElemento = document.getElementById('cardCas');
     imagens = casamentoImgs;
@@ -51,7 +59,9 @@ function cardCorporativo() {
 
 function inicio(imagens, card) {
     imgElemento.src = imagens[cardAtual].imagem;
-    card.appendChild(imgElemento);
+    linkImg.href = imagens[cardAtual].href;
+    linkImg.appendChild(imgElemento);
+    card.appendChild(linkImg);
 }
 
 function alterar(x) {
@@ -66,4 +76,5 @@ function alterar(x) {
 }
 function alterarCard(x) {
     imgElemento.src = imagens[cardAtual].imagem;
+    linkImg.href = imagens[cardAtual].href;
 }

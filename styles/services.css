@@ -129,9 +129,9 @@
 .btnServ {
     position: absolute;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.098);
+    background-color: rgba(0, 0, 0, 0.244);
     height: 100%;
-    width: 2em;
+    width: 2.5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
