@@ -50,13 +50,14 @@
 
 .cardContent {
     display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
 
 .imgSide {
     height: 100%;
-    width: 50%;
+    width: 35rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,7 +134,7 @@
     width: 2em;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border: 0;
 }
 
@@ -143,10 +144,31 @@
     z-index: 2;
 }
 
-#btnCasE {
+.btnE {
+    left: 0;
+}
+
+.btnD {
     right: 0;
 }
 
-#btnCasD {
-    left: 0;
+@media screen and (max-width:1059px) {
+    .cardContent {
+        flex-direction: column;
+    }
+
+    .imgSide,
+    .txtSide {
+        width: 100%;
+    }
+
+    .txtSide {
+        top: 10px;
+        align-items: flex-start;
+    }
+
+    .centerPage,
+    .servicesRoot {
+        height: 110vh;
+    }
 }

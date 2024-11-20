@@ -4,7 +4,7 @@ const casamentoImgs = [
         imagem: '../imagens/bkgnd/bkg2.jpg'
     },
     {
-        imagem: '../imagens/'
+        imagem: '../imagens/bkgnd/bkg3.jpg'
     }
 ]
 const aniversarioImgs = [
@@ -26,7 +26,7 @@ const casCard = document.getElementById('cardCas');
 const casImg = document.createElement('img');
 casImg.src = casamentoImgs[casCardAtual].imagem;
 casCard.appendChild(casImg);
-
+console.log(casCardAtual);
 function alterarCas(x) {
     if (x == 0) {
         if (casCardAtual == 0) return;
