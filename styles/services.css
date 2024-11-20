@@ -113,7 +113,7 @@
 }
 
 .cardServices {
-    height: 25rem;
+    height: 28rem;
     width: 30rem;
     background-color: rgb(255, 255, 255);
     border-radius: 4px;
@@ -122,8 +122,11 @@
 }
 
 .cardServices img {
-    height: 25rem;
-    width: 30rem;
+    width: 100%;
+    /* Preenche o contêiner horizontalmente */
+    height: 100%;
+    /* Preenche o contêiner verticalmente */
+    object-fit: cover;
 }
 
 .btnServ {
