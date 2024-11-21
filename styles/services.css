@@ -172,6 +172,6 @@
 
     .centerPage,
     .servicesRoot {
-        height: 110vh;
+        height: fit-content;
     }
 }
